@@ -84,7 +84,7 @@ async function fetchData(type = "skills") {
     type === "skills" ?
         response = await fetch("skills.json")
         :
-        response = await fetch("./projects/projects.json")
+        response = await fetch("./projects/projects2.json")
     const data = await response.json();
     return data;
 }
@@ -110,7 +110,7 @@ function showProjects(projects) {
     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
         projectHTML += `
         <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/${project.image}.png" alt="project" />
+      <img draggable="false" src="./assets/images/projects2/${project.image}.png" alt="project" />
       <div class="content">
         <div class="tag">
         <h3>${project.name}</h3>
@@ -191,14 +191,24 @@ document.onkeydown = function (e) {
 }
 
 // Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
+// var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+// (function () {
+//     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+//     s1.async = true;
+//     s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
+//     s1.charset = 'UTF-8';
+//     s1.setAttribute('crossorigin', '*');
+//     s0.parentNode.insertBefore(s1, s0);
+// })();
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/691c3034169d6d195aa8f293/1jab1ojgq';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
 })();
 // End of Tawk.to Live Chat
 
